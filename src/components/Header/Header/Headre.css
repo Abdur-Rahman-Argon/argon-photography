@@ -1,0 +1,23 @@
+body {
+  background-color: azure;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.web-title {
+  color: blueviolet;
+}
+
+.nevber a {
+  text-decoration: none;
+  margin-left: 20px;
+  color: rgb(44, 121, 121);
+  font-weight: 700;
+}
+.nevber a:hover {
+  color: rgb(203, 101, 238);
+}
