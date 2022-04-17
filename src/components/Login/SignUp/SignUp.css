@@ -6,7 +6,7 @@
   margin: 5px auto;
   display: flex;
   justify-content: center;
-  box-shadow: rgb(145, 61, 61);
+  box-shadow: 10px 10px 10px rgb(237, 237, 237);
 }
 
 .paralal-line hr {

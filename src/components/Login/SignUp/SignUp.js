@@ -1,41 +1,78 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./SignUp.css";
 import google from "../../../image/google.png";
 import facebook from "../../../image/facebook.png";
 import github from "../../../image/github.png";
 import {
-  FacebookAuthProvider,
-  GithubAuthProvider,
-  GoogleAuthProvider,
-  signInWithPopup,
-} from "firebase/auth";
-import auth from "./../../../firbase.init";
+  useAuthState,
+  useCreateUserWithEmailAndPassword,
+  useSignInWithFacebook,
+  useSignInWithGithub,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+import auth from "../../../firbase.init";
 
 const SignUp = () => {
-  const googleProvider = new GoogleAuthProvider();
-  const facebookProvider = new FacebookAuthProvider();
-  const githubProvider = new GithubAuthProvider();
+  const [name, setName] = useState([]);
+  const [email, setEmail] = useState([]);
+  const [newPassword, setNewPassword] = useState([]);
+  const [confirmPassword, setConfirmPassword] = useState([]);
+  const [error, setError] = useState([]);
+  console.log(name, email, newPassword, confirmPassword);
+
+  const [signInWithGoogle, googleUser, GoogleLoading, GoogleError] =
+    useSignInWithGoogle(auth);
+  const [signInWithGithub, githubUser] = useSignInWithGithub(auth);
+  const [signInWithFacebook, FacebookUser] = useSignInWithFacebook(auth);
+
+  const [user, loading] = useAuthState(auth);
+
+  const navigate = useNavigate();
+
+  if (user) {
+    navigate("/");
+  }
+
+  const [createUserWithEmailAndPassword, createUser] =
+    useCreateUserWithEmailAndPassword(auth);
 
   const handleGoogleSignup = () => {
-    signInWithPopup(auth, googleProvider).then((result) => {
-      const user = result.user;
-      console.log(user);
-    });
+    signInWithGoogle();
   };
   const handleGithubSignup = () => {
-    signInWithPopup(auth, githubProvider).then((result) => {
-      const user = result.user;
-      console.log(user);
-    });
+    signInWithGithub();
+  };
+  const handleFacebookSignIn = () => {
+    signInWithFacebook();
+  };
+
+  const setNameBlur = (event) => {
+    setName(event.target.value);
+  };
+  const setEmailBlur = (event) => {
+    setEmail(event.target.value);
+  };
+  const setNewPasswordBlur = (event) => {
+    setNewPassword(event.target.value);
+  };
+  const setConfirmPasswordBlur = (event) => {
+    setConfirmPassword(event.target.value);
+  };
+
+  const handleCreateUser = (event) => {
+    event.preventDefault();
+
+    createUserWithEmailAndPassword(email, newPassword);
   };
   return (
     <div>
-      <form className="signup-container" action="">
+      <form onSubmit={handleCreateUser} className="signup-container" action="">
         <div>
           <div className="input-group">
             <label htmlFor="name">Your Name</label>
             <input
+              onBlur={setNameBlur}
               type="text"
               name="name"
               id=""
@@ -46,6 +83,7 @@ const SignUp = () => {
           <div className="input-group">
             <label htmlFor="email">Your Email</label>
             <input
+              onBlur={setEmailBlur}
               type="email"
               name="email"
               id=""
@@ -56,7 +94,8 @@ const SignUp = () => {
           <div className="input-group">
             <label htmlFor="new-password">New Password</label>
             <input
-              type="email"
+              onBlur={setNewPasswordBlur}
+              type="password"
               name="new-password"
               id=""
               placeholder="Enter New Password"
@@ -66,7 +105,8 @@ const SignUp = () => {
           <div className="input-group">
             <label htmlFor="confirm-password">Confirm Password</label>
             <input
-              type="email"
+              onBlur={setConfirmPasswordBlur}
+              type="password"
               name="confirm-password"
               id=""
               placeholder="Confirm Password"
