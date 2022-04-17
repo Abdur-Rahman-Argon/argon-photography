@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./SignUp.css";
+import google from "../../../image/google.png";
+import facebook from "../../../image/facebook.png";
+import github from "../../../image/github.png";
 
 const SignUp = () => {
   return (
@@ -61,14 +64,17 @@ const SignUp = () => {
           </div>
 
           <button className="external-signup">
+            <img src={google} alt="" />
             <Link to="/signup">With Google Sign Up</Link>
           </button>
           <br />
           <button className="external-signup">
+            <img src={facebook} alt="" />
             <Link to="/signup">With Facebook Sign Up</Link>
           </button>
           <br />
           <button className="external-signup">
+            <img src={github} alt="" />
             <Link to="/signup">With GitHub Sign Up</Link>
           </button>
         </div>
