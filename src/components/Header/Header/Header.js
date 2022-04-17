@@ -6,15 +6,17 @@ const Header = () => {
   return (
     <nav className="nav-container">
       <div>
-        <h1 className="web-title">Argon Photography</h1>
+        <h1 className="web-title">
+          <Link to="/">Argon Photography</Link>
+        </h1>
       </div>
       <div className="nevber">
         <Link to="/">Home</Link>
-        <Link to="/">Shop</Link>
-        <Link to="/">Photos</Link>
-        <Link to="/">Blogs</Link>
-        <Link to="/">About</Link>
-        <Link to="/">LogIn</Link>
+        <Link to="/">Photos Album</Link>
+        <Link to="/">Package</Link>
+        <Link to="/blogs">Blogs</Link>
+        <Link to="/about">About</Link>
+        <Link to="/login">LogIn</Link>
       </div>
     </nav>
   );

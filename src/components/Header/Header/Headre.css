@@ -11,6 +11,10 @@ body {
 .web-title {
   color: blueviolet;
 }
+.web-title a {
+  text-decoration: none;
+  color: blueviolet;
+}
 
 .nevber a {
   text-decoration: none;

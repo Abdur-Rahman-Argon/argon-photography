@@ -1,0 +1,29 @@
+.signup-container {
+  width: 500px;
+  border: 1px solid rgb(235, 234, 234);
+  padding: 10px 0;
+  border-radius: 10px;
+  margin: 5px auto;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgb(145, 61, 61);
+}
+
+.paralal-line hr {
+  width: 100px;
+  background-color: rgb(255, 255, 255);
+}
+.paralal-line {
+  display: flex;
+  text-align: center;
+  margin: 15px;
+}
+
+.external-signup {
+  width: 300px;
+  height: 40px;
+  background-color: #fffffffa;
+  border-radius: 10px;
+  border: 1px solid gray;
+  margin: 10px 0;
+}
