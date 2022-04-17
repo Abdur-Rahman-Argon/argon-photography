@@ -23,6 +23,12 @@ const SignUp = () => {
       console.log(user);
     });
   };
+  const handleGithubSignup = () => {
+    signInWithPopup(auth, githubProvider).then((result) => {
+      const user = result.user;
+      console.log(user);
+    });
+  };
   return (
     <div>
       <form className="signup-container" action="">
@@ -90,7 +96,7 @@ const SignUp = () => {
               <span>With Facebook Sign Up</span>
             </button>
             <br />
-            <button className="external-signup">
+            <button onClick={handleGithubSignup} className="external-signup">
               <img src={github} alt="" />
               <span>With GitHub Sign Up</span>
             </button>
