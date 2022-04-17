@@ -4,8 +4,25 @@ import "./SignUp.css";
 import google from "../../../image/google.png";
 import facebook from "../../../image/facebook.png";
 import github from "../../../image/github.png";
+import {
+  FacebookAuthProvider,
+  GithubAuthProvider,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
+import auth from "./../../../firbase.init";
 
 const SignUp = () => {
+  const googleProvider = new GoogleAuthProvider();
+  const facebookProvider = new FacebookAuthProvider();
+  const githubProvider = new GithubAuthProvider();
+
+  const handleGoogleSignup = () => {
+    signInWithPopup(auth, googleProvider).then((result) => {
+      const user = result.user;
+      console.log(user);
+    });
+  };
   return (
     <div>
       <form className="signup-container" action="">
@@ -62,21 +79,22 @@ const SignUp = () => {
             <span>or</span>
             <hr />
           </div>
-
-          <button className="external-signup">
-            <img src={google} alt="" />
-            <Link to="/signup">With Google Sign Up</Link>
-          </button>
-          <br />
-          <button className="external-signup">
-            <img src={facebook} alt="" />
-            <Link to="/signup">With Facebook Sign Up</Link>
-          </button>
-          <br />
-          <button className="external-signup">
-            <img src={github} alt="" />
-            <Link to="/signup">With GitHub Sign Up</Link>
-          </button>
+          <div>
+            <button onClick={handleGoogleSignup} className="external-signup">
+              <img src={google} alt="" />
+              <span>With Google Sign Up</span>
+            </button>
+            <br />
+            <button className="external-signup">
+              <img src={facebook} alt="" />
+              <span>With Facebook Sign Up</span>
+            </button>
+            <br />
+            <button className="external-signup">
+              <img src={github} alt="" />
+              <span>With GitHub Sign Up</span>
+            </button>
+          </div>
         </div>
       </form>
     </div>
