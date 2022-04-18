@@ -21,7 +21,7 @@ const Servise = (props) => {
         </p>
       </div>
       <button className="book-btn">
-        <p className="btn-text">Booking Servise </p>
+        <p className="btn-text">Checkout Servise </p>
       </button>
     </div>
   );

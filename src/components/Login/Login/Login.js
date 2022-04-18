@@ -3,7 +3,7 @@ import {
   useAuthState,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firbase.init";
 import "./Login.css";
 
@@ -16,9 +16,11 @@ const Login = () => {
   const [user, loading] = useAuthState(auth);
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   if (user) {
-    navigate("/");
+    navigate(from, { replace: true });
   }
 
   const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);

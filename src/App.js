@@ -8,9 +8,11 @@ import Home from "./components/Home/Home/Home";
 import Blogs from "./components/Blogs/Blogs";
 import SignUp from "./components/Login/SignUp/SignUp";
 import Services from "./components/Home/Services/Services";
-import PhotosAlbum from "./components/Home/PhotosAlbum/PhotosAlbum";
+
 import Footer from "./components/Footer/Footer/Footer";
 import NotFound from "./components/Shared/NotFound/NotFound";
+import CheckOut from "./components/Home/CheckOut/CheckOut";
+import RequireAuth from "./components/Login/RequreAuth/RequreAuth";
 
 function App() {
   return (
@@ -20,8 +22,12 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/service" element={<Services></Services>}></Route>
         <Route
-          path="/photosalbum"
-          element={<PhotosAlbum></PhotosAlbum>}
+          path="/checkout"
+          element={
+            <RequireAuth>
+              <CheckOut></CheckOut>
+            </RequireAuth>
+          }
         ></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/about" element={<About></About>}></Route>

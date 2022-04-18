@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./SignUp.css";
 import google from "../../../image/google.png";
 import facebook from "../../../image/facebook.png";
@@ -7,6 +7,7 @@ import github from "../../../image/github.png";
 import {
   useAuthState,
   useCreateUserWithEmailAndPassword,
+  useSendEmailVerification,
   useSignInWithFacebook,
   useSignInWithGithub,
   useSignInWithGoogle,
@@ -19,7 +20,6 @@ const SignUp = () => {
   const [newPassword, setNewPassword] = useState([]);
   const [confirmPassword, setConfirmPassword] = useState([]);
   const [error, setError] = useState([]);
-  console.log(name, email, newPassword, confirmPassword);
 
   const [signInWithGoogle, googleUser, GoogleLoading, GoogleError] =
     useSignInWithGoogle(auth);
@@ -29,13 +29,24 @@ const SignUp = () => {
   const [user, loading] = useAuthState(auth);
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   if (user) {
-    navigate("/");
+    navigate(from, { replace: true });
   }
+
+  const verifyEmail = () => {
+    sendEmailVerification(auth.currentUser).then(() => {
+      // Email verification sent!
+      // ...
+    });
+  };
 
   const [createUserWithEmailAndPassword, createUser] =
     useCreateUserWithEmailAndPassword(auth);
+
+  const [sendEmailVerification, sending] = useSendEmailVerification(auth);
 
   const handleGoogleSignup = () => {
     signInWithGoogle();
