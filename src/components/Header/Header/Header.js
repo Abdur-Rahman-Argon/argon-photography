@@ -21,8 +21,8 @@ const Header = () => {
       <div className="nevber">
         <CustomLink to="/">Home</CustomLink>
         <CustomLink to="/service">Services</CustomLink>
-        <CustomLink to="/photosalbum">Photos-Album</CustomLink>
         <CustomLink to="/checkout">Checkout</CustomLink>
+        <CustomLink to="/photosalbum">Photos-Album</CustomLink>
         <CustomLink to="/blogs">Blogs</CustomLink>
         <CustomLink to="/about">About</CustomLink>
         {user ? (
