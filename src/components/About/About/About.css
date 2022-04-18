@@ -16,8 +16,9 @@
 }
 
 .about-detail {
-  width: 300px;
+  width: 400px;
   margin: 0 auto;
+  margin-top: 15px;
 }
 
 .about-detail p {
