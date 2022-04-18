@@ -10,6 +10,7 @@ import SignUp from "./components/Login/SignUp/SignUp";
 import Services from "./components/Home/Services/Services";
 import PhotosAlbum from "./components/Home/PhotosAlbum/PhotosAlbum";
 import Footer from "./components/Footer/Footer/Footer";
+import NotFound from "./components/Shared/NotFound/NotFound";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
 
       <Footer></Footer>
