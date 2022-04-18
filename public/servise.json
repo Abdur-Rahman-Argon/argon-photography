@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "X-ray",
+    "img": "https://i.ibb.co/RgBLP5K/X-ray.png",
+    "description": "this is X-ray",
+    "price": 8000
+  },
+  {
+    "id": 2,
+    "name": "ECG",
+    "img": "https://i.ibb.co/YBtxSRW/ECG.jpg",
+    "description": "This is ecg",
+    "price": 8000
+  },
+  {
+    "id": 3,
+    "name": "MRI",
+    "img": "https://i.ibb.co/BtzpSz6/Mri.png",
+    "description": "",
+    "price": 8000
+  },
+  {
+    "id": 4,
+    "name": "Ultrasonogram",
+    "img": "https://i.ibb.co/9g80zHq/Ultrasonogram.png",
+    "description": "",
+    "price": 8000
+  },
+  {
+    "id": 5,
+    "name": "Blood Test",
+    "description": "",
+    "img": "https://i.ibb.co/QchhrZP/Blood-test.png",
+    "price": 8000
+  },
+  {
+    "id": 6,
+    "name": "blood Sugar-test",
+    "description": "",
+    "img": "https://i.ibb.co/ccjKVBN/Blood-Sugar.png",
+    "price": 8000
+  },
+  {
+    "id": 7,
+    "name": "Blood Pressure",
+    "img": "https://i.ibb.co/8PjRD0V/blood-presher.png",
+    "description": "",
+    "price": 8000
+  },
+  {
+    "id": 8,
+    "name": "Urine Test",
+    "img": "https://i.ibb.co/BCNjjjN/Urine.png",
+    "description": "",
+    "price": 8000
+  }
+]

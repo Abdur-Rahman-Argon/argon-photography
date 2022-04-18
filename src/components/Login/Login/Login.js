@@ -67,7 +67,7 @@ const Login = () => {
           <div className="form-submit">
             <input type="submit" value="Log In" />
           </div>
-          <p> Reset Your PassWord ?</p>
+          <p className="reset-pin"> Reset Your PassWord ?</p>
           <hr />
           <button className="creat-account">
             <Link to="/signup">Create New Account</Link>

@@ -1,0 +1,54 @@
+.servises-contsiner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 50px;
+}
+
+.servise {
+  width: 350px;
+  height: 510px;
+  border: 1px solid #95a0a7;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+  box-shadow: 5px 5px 8px gray;
+}
+.servise img {
+  width: 286px;
+  height: 286px;
+  border-radius: 8px;
+  margin: 7px;
+}
+.servise-info {
+  margin: 0 14px;
+}
+.servise-info p {
+  margin-bottom: 0;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.servise-name {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 25px;
+  margin: 7px 0;
+}
+.book-btn {
+  width: 100%;
+  background: #17c0bd;
+  border: none;
+  border-radius: 0px 0px 8px 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.book-btn:hover {
+  background-color: #29cbc8;
+}

@@ -15,6 +15,11 @@ body {
   text-decoration: none;
   color: blueviolet;
 }
+.nevber {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .nevber a {
   text-decoration: none;
@@ -27,7 +32,6 @@ body {
   color: rgb(44, 121, 121);
   font-weight: 700;
   font-size: 16px;
-  background-color: ;
   border: 0;
 }
 

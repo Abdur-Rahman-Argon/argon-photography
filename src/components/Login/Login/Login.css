@@ -6,9 +6,10 @@
   margin: 5px auto;
   display: flex;
   justify-content: center;
+
   box-shadow: 10px 10px 10px rgb(237, 237, 237);
 }
-p {
+.reset-pin {
   color: blue;
   font-size: 16px;
   font-weight: 500;
