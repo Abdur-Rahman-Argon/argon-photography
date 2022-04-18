@@ -1,58 +1,72 @@
 [
   {
     "id": 1,
-    "name": "X-ray",
-    "img": "https://i.ibb.co/RgBLP5K/X-ray.png",
-    "description": "this is X-ray",
-    "price": 8000
+    "name": "Wildlife Photography",
+    "img": "https://cdn.naturettl.com/wp-content/uploads/2016/04/22014725/Juvenile-Shags-800x533.jpg",
+    "description": " the Best Camography for Wildlife Photography ",
+    "price": 800
   },
   {
     "id": 2,
-    "name": "ECG",
-    "img": "https://i.ibb.co/YBtxSRW/ECG.jpg",
-    "description": "This is ecg",
-    "price": 8000
+    "name": "Landscape Photography",
+    "img": "https://cdn.naturettl.com/wp-content/uploads/2017/08/11154828/best-landscape-photography-camera-800x600.jpg",
+    "description": "landscape photographer who intends to trails, the Northern Lights",
+    "price": 750
   },
   {
     "id": 3,
-    "name": "MRI",
-    "img": "https://i.ibb.co/BtzpSz6/Mri.png",
-    "description": "",
-    "price": 8000
+    "name": "Sea Beach",
+    "img": "https://cdn.naturettl.com/wp-content/uploads/2017/08/22011713/best-camera-landscape-photography-5-800x534.jpg",
+    "description": "the shutter opens to allow sufficient light to pass through",
+    "price": 1500
   },
   {
     "id": 4,
-    "name": "Ultrasonogram",
-    "img": "https://i.ibb.co/9g80zHq/Ultrasonogram.png",
-    "description": "",
-    "price": 8000
+    "name": "Sea Deep",
+    "img": "https://cdn.naturettl.com/wp-content/uploads/2020/08/31151837/how-to-fix-and-edit-underwater-photos-12-900x619.jpg",
+    "description": "How to Practice Your Underwater Photography Without Going Diving",
+    "price": 2500
   },
   {
     "id": 5,
-    "name": "Blood Test",
-    "description": "",
-    "img": "https://i.ibb.co/QchhrZP/Blood-test.png",
-    "price": 8000
+    "name": "Macro Photography",
+    "description": "Macrophotography is primarily about magnifying and capturing",
+    "img": "https://www.naturettl.com/wp-content/uploads/2021/07/How-to-use-Foregrounds-Backgrounds-in-Macro-Photography-10-800x534.jpg",
+    "price": 500
   },
   {
     "id": 6,
-    "name": "blood Sugar-test",
-    "description": "",
-    "img": "https://i.ibb.co/ccjKVBN/Blood-Sugar.png",
-    "price": 8000
+    "name": "Panoramas of the Night Sky",
+    "description": "There’s one good reason for that. Sometimes, after stitching a panorama",
+    "img": "https://cdn.naturettl.com/wp-content/uploads/2021/06/04110437/how-to-take-panoramas-of-the-night-sky-18-800x450.jpg",
+    "price": 900
   },
   {
     "id": 7,
-    "name": "Blood Pressure",
-    "img": "https://i.ibb.co/8PjRD0V/blood-presher.png",
-    "description": "",
-    "price": 8000
+    "name": "Chrismas Day",
+    "img": "https://cdn.britannica.com/66/217566-138-BE0B54AB/Did-you-know-Christmas.jpg?w=800&h=450&c=crop",
+    "description": "Christian festival celebrating photography of the birth of Jesus.",
+    "price": 3500
   },
   {
     "id": 8,
-    "name": "Urine Test",
-    "img": "https://i.ibb.co/BCNjjjN/Urine.png",
-    "description": "",
-    "price": 8000
+    "name": "Sports Photography",
+    "img": "https://i.ibb.co/8stJxwq/sports.png",
+    "description": "We keep score at Nielsen Sports. It's what we're built photo",
+    "price": 1800
+  },
+  {
+    "id": 9,
+    "name": "Underwater Photography",
+    "img": "https://cdn.naturettl.com/wp-content/uploads/2019/12/20192931/A-Guide-to-Underwater-Strobes-and-Lighting-4-800x534.jpg",
+    "description": "Strobe manufacturers typically  photography on UnderWater",
+    "price": 650
+  },
+  {
+    "id": 9,
+    "name": "Nature photography",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsooqhXj4AcMB4dUR_RXhdKDaQRIQwiWRNGA&usqp=CAU",
+    "description": "Nature Photography Guide to the White Cliffs of Dover",
+    "price": 650
   }
 ]

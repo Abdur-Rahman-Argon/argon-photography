@@ -9,10 +9,10 @@ import Blogs from "./components/Blogs/Blogs";
 import SignUp from "./components/Login/SignUp/SignUp";
 import Services from "./components/Home/Services/Services";
 
-import Footer from "./components/Footer/Footer/Footer";
 import NotFound from "./components/Shared/NotFound/NotFound";
 import CheckOut from "./components/Home/CheckOut/CheckOut";
 import RequireAuth from "./components/Login/RequreAuth/RequreAuth";
+import PhotosAlbum from "./components/Home/PhotosAlbum/PhotosAlbum";
 
 function App() {
   return (
@@ -29,14 +29,16 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route
+          path="/photosalbum"
+          element={<PhotosAlbum></PhotosAlbum>}
+        ></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
-
-      <Footer></Footer>
     </div>
   );
 }

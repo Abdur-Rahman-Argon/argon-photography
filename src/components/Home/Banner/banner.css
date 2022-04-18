@@ -1,7 +1,7 @@
 .banner {
   width: 80%;
   margin: 0 auto;
-  background-image: url("https://i.ibb.co/k6wpL0q/banner.png");
+  background-image: url("https://i.ibb.co/qB9zP17/banners.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
@@ -9,19 +9,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 25px 5px 8px rgb(0, 0, 0);
+  text-shadow: 2px 2px 8px rgb(44, 220, 197);
   text-indent: 20px;
 }
 
 .banner-text {
-  top: 100px;
   width: 50%;
   margin: 20px;
   text-align: center;
 }
-.banner-text h3 {
+.banner-text h2 {
+  font-weight: 600;
+  font-size: 30px;
 }
 .detail-btn {
+  margin-top: 20px;
   padding: 10px 40px;
   border: 0px;
   border-radius: 15px;

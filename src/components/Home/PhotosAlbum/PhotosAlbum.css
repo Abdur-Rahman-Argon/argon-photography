@@ -1,0 +1,9 @@
+.photos-album {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Photos img {
+  width: 300px;
+  margin: 6px;
+}

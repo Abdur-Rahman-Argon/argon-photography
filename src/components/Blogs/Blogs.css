@@ -1,0 +1,28 @@
+.blog-container {
+  width: 80%;
+  margin: 20px auto;
+}
+.blog-container h1 {
+  text-align: center;
+  color: lightseagreen;
+}
+.Card {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 60px 0;
+  border-radius: 10px;
+  background-color: rgba(128, 236, 230, 0.756);
+  box-shadow: 5px 8px 10px rgb(154, 155, 152);
+}
+
+.Card h2 {
+  margin-bottom: 10px;
+  color: rgb(197, 10, 253);
+}
+.Card p {
+  margin-top: 10px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(16, 146, 239);
+  font-size: 20px;
+}

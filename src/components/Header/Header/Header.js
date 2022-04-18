@@ -15,13 +15,14 @@ const Header = () => {
     <nav className="nav-container">
       <div>
         <h1 className="web-title">
-          <Link to="/">শিফা ডায়াগনস্টিক সেন্টার</Link>
+          <Link to="/">Argon Photography</Link>
         </h1>
       </div>
       <div className="nevber">
         <CustomLink to="/">Home</CustomLink>
         <CustomLink to="/service">Services</CustomLink>
-        <CustomLink to="/checkout">Checkout Servise</CustomLink>
+        <CustomLink to="/photosalbum">Photos-Album</CustomLink>
+        <CustomLink to="/checkout">Checkout</CustomLink>
         <CustomLink to="/blogs">Blogs</CustomLink>
         <CustomLink to="/about">About</CustomLink>
         {user ? (
