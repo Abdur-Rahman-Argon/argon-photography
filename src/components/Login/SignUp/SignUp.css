@@ -9,14 +9,16 @@
   box-shadow: 10px 10px 10px rgb(237, 237, 237);
 }
 
-.paralal-line hr {
+.line {
+  height: 2px;
+  background-color: rgb(78, 78, 78);
   width: 100px;
-  background-color: rgb(123, 123, 123);
 }
 .paralal-line {
   display: flex;
-  text-align: center;
   margin: 15px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .external-signup img {

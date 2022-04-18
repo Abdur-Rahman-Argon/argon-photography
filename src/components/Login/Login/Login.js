@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   useAuthState,
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -25,12 +26,20 @@ const Login = () => {
 
   const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
 
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
   const setEmailBlur = (event) => {
     setEmail(event.target.value);
   };
   const setPasswordBlur = (event) => {
     setPassword(event.target.value);
   };
+
+  const resetPassword = async () => {
+    await sendPasswordResetEmail(email);
+    alert("Sent email");
+  };
+
   const handleUserLogin = (event) => {
     event.preventDefault();
     if (!email) {
@@ -69,7 +78,11 @@ const Login = () => {
           <div className="form-submit">
             <input type="submit" value="Log In" />
           </div>
-          <p className="reset-pin"> Reset Your PassWord ?</p>
+          <p className="reset-pin" onClick={resetPassword}>
+            <Link to="" className="reset-pin">
+              Reset Your PassWord ?
+            </Link>
+          </p>
           <hr />
           <button className="creat-account">
             <Link to="/signup">Create New Account</Link>

@@ -36,13 +36,6 @@ const SignUp = () => {
     navigate(from, { replace: true });
   }
 
-  const verifyEmail = () => {
-    sendEmailVerification(auth.currentUser).then(() => {
-      // Email verification sent!
-      // ...
-    });
-  };
-
   const [createUserWithEmailAndPassword, createUser] =
     useCreateUserWithEmailAndPassword(auth);
 
@@ -71,9 +64,10 @@ const SignUp = () => {
     setConfirmPassword(event.target.value);
   };
 
-  const handleCreateUser = (event) => {
+  const handleCreateUser = async (event) => {
     event.preventDefault();
-
+    await sendEmailVerification();
+    alert("Sent email");
     createUserWithEmailAndPassword(email, newPassword);
   };
   return (
@@ -128,23 +122,22 @@ const SignUp = () => {
             <input type="submit" value="Sign Up" />
           </div>
           <p>
-            Have a Account?<Link to="/login"> LogIn</Link>
+            Have a Account?
+            <Link to="/login" className="reset-pin">
+              {" "}
+              LogIn
+            </Link>
           </p>
 
           <div className="paralal-line">
-            <hr />
+            <div className="line"></div>
             <span>or</span>
-            <hr />
+            <div className="line"></div>
           </div>
           <div>
             <button onClick={handleGoogleSignup} className="external-signup">
               <img src={google} alt="" />
               <span>With Google Sign Up</span>
-            </button>
-            <br />
-            <button className="external-signup">
-              <img src={facebook} alt="" />
-              <span>With Facebook Sign Up</span>
             </button>
             <br />
             <button onClick={handleGithubSignup} className="external-signup">
