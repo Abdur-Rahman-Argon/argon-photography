@@ -68,11 +68,7 @@ const Blogs = () => {
         </p>
       </div>
       <div className="Card">
-        <h2>
-          <b>
-            Q: What other services does firebase provide other than
-            authentication?
-          </b>
+        
         </h2>
         <p>
           <b>A: .</b>

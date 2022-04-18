@@ -1,0 +1,26 @@
+.about-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.prfile-pic {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.prfile-pic img {
+  border-radius: 500px;
+  width: 250px;
+  border: 5px solid lightcoral;
+}
+
+.about-detail {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.about-detail p {
+  font-size: 20px;
+  font-weight: 500;
+}
